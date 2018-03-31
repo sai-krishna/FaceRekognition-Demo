@@ -82,5 +82,10 @@ get '/collection/:action' do
         response = client.delete_collection({ collection_id: FACE_COLLECTION })
       end
   end
-  redirect '/'
+  redirect '/train'
+end
+
+
+get '/train' do
+  erb :train
 end

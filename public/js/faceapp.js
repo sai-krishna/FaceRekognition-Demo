@@ -39,6 +39,7 @@ $(document).ready(function() {
           $.post("/speech", {tosay: "Good " + greetingTime(moment()) + " " + data.id}, function(response) {
             $("#audio_speech").attr("src", "data:audio/mpeg;base64," + response);
             $("#audio_speech")[0].play();
+            window.open("https://www.google.co.in", '_blank');
           });
         } else {
           $("#upload_result").html(data.message);
